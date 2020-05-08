@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import os
-import pandas as pd
+from pandas import DataFrame
 import configparser
 import sys
 # import matplotlib.pyplot as plt
@@ -75,7 +75,7 @@ def write2file(dataframe):
         if dataframe["content"] == {}:
             print("nothing to write!")
             return
-        pd.DataFrame(dataframe).to_csv("result.csv")
+        DataFrame(dataframe).to_csv("result.csv")
         # for name, times in dataframe["com_names"].items():
         #     plt.bar(name, times)
         # plt.legend()
